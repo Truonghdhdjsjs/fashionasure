@@ -1,0 +1,439 @@
+#header
+{
+    box-shadow: 2px 2px 4px 2px rgba($color: #000000, $alpha: 0.2);
+}
+.header_menu
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_list
+    {
+        display: flex;
+        align-items: center;
+        gap: 0 15px;
+        list-style: none;
+    }
+    &_item
+    {
+        position: relative;
+    }
+    &_link
+    {
+        text-decoration: none;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+.header_menu_logo
+{
+    display: inline-block;
+    &_link
+    {
+        text-decoration: none;
+    }
+    &_img
+    {
+        width: 98px;
+        height: 98px;
+        object-fit: contain;
+    }
+}
+
+// phần icon search
+.header_menu_item_zone
+{
+    display: flex;
+    align-items: center;
+    gap: 0 12px;
+   
+    &_search:hover
+    {
+        cursor: pointer;
+    }
+    &_input
+    {
+        border-radius: 25px;
+        padding: 5px 0;
+        border: 1px solid #777777;
+        transition: all 1s ease;
+        display: none;
+    }
+    &_input::placeholder
+    {
+        color: #777777;
+        text-transform: capitalize;
+    }
+}
+
+//phan menu san pham
+.header_menu_item_border_second
+{
+    position: absolute;
+    display: none;
+    transition: all 1s ease;
+    &_list
+    {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: space-around;
+        list-style: none;
+        min-width: 150px;
+        border: 1px solid transparent;
+        box-shadow: 2px 2px 4px 2px rgba($color: #000000, $alpha: 0.2);
+        padding: 10px;
+        gap: 15px 0;
+        z-index: 2;
+        border-radius: 2px;
+    }
+    &_item
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_link
+    {
+        text-decoration: none;
+    }
+}
+.header_menu_item_border_second_item
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 150px;
+}
+.header_menu_item_boder_second_link
+{
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.header_menu_item_boder_second_link:hover
+{
+    color: #777777;
+}
+.header_menu_item__second_icon
+{
+    font-size: 12px;
+    color: #777777;
+}
+.header_menu_item:hover .header_menu_item_border_second
+{
+    display: block;
+}
+//  ket thuc phan menu san pham
+.header_menu_item_user_boder
+{
+    position: absolute;
+    min-width: 100px;
+    display: none;
+    &_list
+    {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 10px 0;
+        list-style: none;
+        flex-direction: column;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        padding: 10px 6px;
+        margin-top: 10px;
+        box-shadow: 2px 2px 4px 2px rgba($color: #000000, $alpha: 0.2);
+        background-color: #ffff;
+    }
+    &_list::before {
+        content: ''; /* Required for pseudo-elements */
+        position: absolute; /* Position the triangle relative to the container */
+        top: 1px; /* Adjust this value to control the distance of the triangle from the top */
+        left: 2%; /* Position the triangle in the middle horizontally */
+        transform: translateX(-10%); /* Center the triangle horizontally */
+        border-width: 0 10px 10px; /* Define the size and shape of the triangle */
+        border-style: solid;
+        border-color: transparent transparent #ffff; /* Set the color of the triangle */
+        box-shadow: inset(2px 2px 4px rgba(0,0,0,0.2));
+    }
+    &_item
+    {
+    //    background-color: #777777;
+        min-width: 100%;  
+    }
+    &_link
+    {
+        text-decoration: none;
+        letter-spacing: 0.25px;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 24px;
+        transition: all 0.3s ease;
+    }
+    &_link:hover
+    {
+        color: #2e2d2d;
+    }
+
+}
+.activity
+{
+    display: block;
+    transition: all 1s;
+    z-index: 2;
+}
+// ket thuc pha gio hàng
+.banner
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 500px;
+}
+.banner_zone
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px 0;
+    &_txt
+    {
+        text-transform: capitalize;
+        font-size: 3.5rem;
+        letter-spacing: 0.25px;
+    }
+    &_tilte
+    {
+        display: flex;
+        align-items: center;
+    }
+    &_tilte_txt
+    {
+        font-weight: 600;
+        text-transform: capitalize;   
+        font-size: 2rem;
+    }
+    &_tilte_txt_noidung
+    {
+        font-size: 1.5rem;
+        margin-left: 4px;
+        text-transform: capitalize;
+        display: inline-block;
+        word-wrap: break-word;
+    }
+    &_footer_btn
+    {
+        border: none;
+        background-color: aliceblue;
+        padding: 15px 40px;
+        border-radius: 2px;
+        text-transform: capitalize;
+        font-weight: 600;
+        transition: all 0.6s ease;
+    }
+    &_footer_btn:hover
+    {
+        background-color: #000000;
+        color: #ffff;
+        cursor: pointer;
+        box-shadow: 2px 2px 4px 2px rgba($color: #000000, $alpha: 0.2);
+    }
+}
+.banner_img
+{
+    // min-width: 750px;
+    // min-height: 500px;
+    max-width: 600px;
+    overflow: hidden;
+    &_list
+    {
+        overflow: hidden;
+        // min-width: 750px;
+        display: flex;
+        align-items: center;
+        gap:0 2px ;
+        animation: slilecontact 20s infinite;
+    }
+    &_i
+    {
+        object-fit: contain;
+        display: inline-block;
+        transition: all 0.3s ease;
+        border-radius: 6px;
+        max-width: 100%;
+    }
+    &_list:hover  &_i
+    {
+        transform: scale(1.01);
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    @keyframes slilecontact {
+        20%
+        {
+            margin-left: 0;
+        }
+        40%
+        {
+            margin-left: calc(-600px * 1);
+        }
+        60% {
+            margin-left: calc(-600px * 2);
+        }
+        80% {
+            margin-left: calc(-600px * 3);
+        }
+    }
+}
+.brand_introduction
+{
+
+    &_h2
+    {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 2rem;
+        letter-spacing: 0.2px ;
+    }
+    &_article
+    {
+        padding-top: 12px;
+    }
+    &_nav
+    {
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // gap: 0 30px ;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+        align-items: center;
+        
+    }
+    &_information_brand
+    {
+        display: flex;
+       align-items: start;
+       gap: 20px 0;
+       flex-direction: column;
+    }
+    &_img
+    {
+        overflow: hidden;
+    }
+    &_img_brand
+    {
+        max-width: 100%;
+        display: inline-block;
+        object-fit: cover;
+        width: 2500px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        border-radius: 25px;
+        height: 300px;
+    }
+    &_img:hover &_img_brand
+    {
+        transform: scale(1.02);
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    &_img::before
+    {
+        content: "";
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.3);
+        min-height: 200px;
+        min-width: 60px;
+        border: 50%;
+        left: -70px;
+        transform: skewX(-30deg);
+    }
+    &_img:hover::before
+    {
+        animation: shine 1s ;
+    }
+    @keyframes shine {
+        0%,100%
+        {
+            left: -70px;  
+        }
+        50%
+        {
+            left: 100%;
+        }
+    }
+    &_information_brand_txt
+    {
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+    }
+    &_img_brand_txt
+    {
+        line-height: 24px;
+        font-size: 1.2rem;
+        text-align: left;
+        word-wrap: break-word;
+        letter-spacing: 0.25px;
+        text-overflow: clip;
+    }
+    &_img_brand_txt
+    {
+        text-align: left;
+    }
+    &_img_brand_footer_btn
+    {
+        border: none;
+        padding: 10px 30px;
+        text-transform: capitalize;
+        font-weight:500;
+        border-radius: 4px;
+        background-color: #000000;
+        color: #fff;
+        transition: linear 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+    &_img_brand_footer_btn::before
+    {
+        content: '';
+        position: absolute;
+        left: -100%;
+        top: -100%;
+        width: 120%;
+        height: 100%;
+        transform: rotate(-45deg);
+        background: linear-gradient(transparent,#ffffffcc,transparent);
+        transition: linear 0.4s;
+    }
+    &_img_brand_footer_btn:hover::before
+    {
+        left: 120%;
+        top: 120%;
+    }
+    &_img_brand_footer_btn:hover
+    {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    // &_video
+    // {
+    //     width: 100px;
+    //     height: 500px;
+    // }
+}
+.outstanding_products
+{
+    padding-top: 10px;
+    &_txt
+    {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 2.2rem;
+    }
+}
