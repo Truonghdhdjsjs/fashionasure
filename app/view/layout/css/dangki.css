@@ -1,0 +1,143 @@
+#form_register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.border_form {
+  border: 1px solid transparent;
+  padding: 10px;
+  border-radius: 4px;
+  min-width: 300px;
+  background-color: #f5f5f5;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+}
+.border_form_article {
+  padding-top: 6px;
+}
+.border_form_header_txt {
+  text-align: center;
+  letter-spacing: 0.25px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.border_form_nav {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: start;
+  min-width: 300px;
+  gap: 6px;
+}
+.border_form_item {
+  position: relative;
+  min-width: 300px;
+}
+.border_form_item i {
+  position: absolute;
+  transform: translateX(-30px) translateY(10px);
+}
+.border_form_nav p {
+  font-weight: 500;
+  color: rgb(187, 187, 187);
+  letter-spacing: 0.25px;
+}
+.border_form_nav input {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  outline: none;
+  min-width: 300px;
+}
+.border_form_nav .sub {
+  background-color: red;
+  border: none;
+  color: #f5f5f5;
+  font-weight: 500;
+  letter-spacing: 0.25;
+}
+.border_form_nav input::placeholder {
+  letter-spacing: 0.25px;
+}
+.border_form .or {
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+.border_form .or::before {
+  content: "";
+  width: 120px;
+  height: 1px;
+  background-color: rgb(187, 187, 187);
+  border: 1px solid rgb(187, 187, 187);
+  position: absolute;
+  left: 0%;
+  top: 50%;
+}
+.border_form .or::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  background-color: rgb(187, 187, 187);
+  border: 1px solid rgb(187, 187, 187);
+  position: absolute;
+  right: 0%;
+  top: 50%;
+}
+
+.tool {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.tool_facebook {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+.tool_facebook:first-child {
+  background-color: #0861f2;
+  padding: 10px 20px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.tool_facebook:hover:first-child {
+  background-color: #2176ff;
+  cursor: pointer;
+}
+.tool_facebook:last-child {
+  background-color: #dedede;
+  padding: 10px 20px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.tool_facebook .tool_facebook_icon {
+  transform: none;
+  position: relative;
+}
+.tool_facebook .tool_facebook_icon:first-child {
+  transform: none;
+  position: relative;
+  color: white;
+}
+.tool .Facebook {
+  padding-left: 10px;
+  color: #9d9b9b;
+}
+.tool .tool_google_icon {
+  color: rgb(255, 15, 15);
+  position: relative;
+  transform: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 6px;
+  padding-top: 6px;
+}
+
+/*# sourceMappingURL=dangki.css.map */

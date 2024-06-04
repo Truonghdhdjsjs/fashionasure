@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="../view/layout/css/default.css">
     <link rel="stylesheet" href="../view/layout/css/color.css">
     <link rel="stylesheet" href="../view/layout/css/header.css">
+    <!-- Required Core stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+<!-- Optional Theme stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.9/glider.css" integrity="sha512-nfkkRjU7urjt0UPiMZpiFlK1SAy657MtPOG1DdM9kvBbwdspZ4dH+Gsu43U3Kry8UsF8eyjqjBppcw2wx7TU3w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -22,8 +27,8 @@
                             </a>
                         </div>
                         <ul class="header_menu_list">
-                            <li class="header_menu_item"><a href="" class="header_menu_link">giới thiệu</a></li>
-                            <li class="header_menu_item"><a href="" class="header_menu_link">sản phẩm </a>
+                            <li class="header_menu_item"><a href="information" class="header_menu_link">giới thiệu</a></li>
+                            <li class="header_menu_item"><a href="product.html" class="header_menu_link">sản phẩm </a>
                                 <div class="header_menu_item_border_second">
                                     <ul class="header_menu_item_border_second_list">
                                         <li class="header_menu_item_border_second_item">
@@ -46,8 +51,8 @@
                                 </div>
                             </li>
                             <li class="header_menu_item"><a href="" class="header_menu_link">chính sách</a></li>
-                            <li class="header_menu_item"><a href="" class="header_menu_link">tin tức</a></li>
-                            <li class="header_menu_item"><a href="" class="header_menu_link">liên hệ</a></li>
+                            <li class="header_menu_item"><a href="news.html" class="header_menu_link">tin tức</a></li>
+                            <li class="header_menu_item"><a href="contact.html" class="header_menu_link">liên hệ</a></li>
                             <li class="header_menu_item">
                                 <div class="header_menu_item_zone">
                                     <input type="search" name="btnseach" id="" class="header_menu_item_zone_input" placeholder="tìm kiếm sản phẩm ...">
@@ -63,8 +68,8 @@
                                 <i class="fa-solid fa-user header_menu_item_user"></i>
                                 <div class="header_menu_item_user_boder">
                                         <ul class="header_menu_item_user_boder_list">
-                                            <li class="header_menu_item_user_boder_item"><a href="" class="header_menu_item_user_boder_link">Đăng kí</a></li>
-                                            <li class="header_menu_item_user_boder_item"><a href="" class="header_menu_item_user_boder_link">Đăng nhập</a></li>
+                                            <li class="header_menu_item_user_boder_item"><a href="form_register.html" class="header_menu_item_user_boder_link">Đăng kí</a></li>
+                                            <li class="header_menu_item_user_boder_item"><a href="form_login.html" class="header_menu_item_user_boder_link">Đăng nhập</a></li>
                                         </ul>
                                 </div>
                             </li>
@@ -140,22 +145,360 @@
             </section>
             <!-- kết thúc phần giới thiệu sản phẩm -->
             <!-- mơ đầu phần sản phẩm nổi  bật -->
-            <section id="outstanding_products">
-                <div class="outstanding_products">
-                    <header class="outstanding_products_header">
-                        <h2 class="outstanding_products_txt">outstanding products</h2>
-                    </header>
-                  
-                    
+            <!-- <section id="outstanding_products">
+                <div class="grid">
+                    <div class="outstanding_products">
+                        <header class="outstanding_products_header">
+                            <h2 class="outstanding_products_txt">outstanding products</h2>
+                        </header>
+                        <article class="outstanding_products_article">
+                            
+                            <div class="glide">
+                                <div data-glide-el="controls">
+                                    <div class="product_box">
+                                        <div class="p-img-container">
+                                            <div class="p-img">
+                                                <a href="#">
+                                                    <img src="../view/layout/img/product/Red_LCPSPACU345UR01NOSS24_1.jpg" alt="" srcset="" class="p-img-front">
+                                                    <img src="../view/layout/img/product/White_LTSBXCOA265UW0101SS24_2.jpg" alt="" srcset="" class="p-img-back">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="p-box-text">
+        
+                                            <div class="product_categoly">
+                                                <span>Nón</span>
+                                            </div>
+                                            <a href="" class="product-title">
+                                                jasjgajsj
+                                            </a>
+                                            <div class="price-buy">
+                                                <span class="p-price">120.000vnd</span>
+                                                <a href="" class="p-price-btn">buy now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product_box">
+                                        <div class="p-img-container">
+                                            <div class="p-img">
+                                                <a href="#">
+                                                    <img src="../view/layout/img/product/Red_LCPSPACU345UR01NOSS24_1.jpg" alt="" srcset="" class="p-img-front">
+                                                    <img src="../view/layout/img/product/White_LTSBXCOA265UW0101SS24_2.jpg" alt="" srcset="" class="p-img-back">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="p-box-text">
+        
+                                            <div class="product_categoly">
+                                                <span>Nón</span>
+                                            </div>
+                                            <a href="" class="product-title">
+                                                jasjgajsj
+                                            </a>
+                                            <div class="price-buy">
+                                                <span class="p-price">120.000vnd</span>
+                                                <a href="" class="p-price-btn">buy now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product_box">
+                                        <div class="p-img-container">
+                                            <div class="p-img">
+                                                <a href="#">
+                                                    <img src="../view/layout/img/product/Red_LCPSPACU345UR01NOSS24_1.jpg" alt="" srcset="" class="p-img-front">
+                                                    <img src="../view/layout/img/product/White_LTSBXCOA265UW0101SS24_2.jpg" alt="" srcset="" class="p-img-back">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="p-box-text">
+        
+                                            <div class="product_categoly">
+                                                <span>Nón</span>
+                                            </div>
+                                            <a href="" class="product-title">
+                                                jasjgajsj
+                                            </a>
+                                            <div class="price-buy">
+                                                <span class="p-price">120.000vnd</span>
+                                                <a href="" class="p-price-btn">buy now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  <button data-glide-dir="<">prev</button>
+                                  <button data-glide-dir=">">next</button>
+                                </div>
+                              </div>
+
+
+
+    
+                        </article>
+
+                    </div>
+                </div>
+            </section> -->
+            <!-- kết thúc phần sản phẩm nổi bật -->
+            <!-- banner sale trong tháng -->
+            <section id="banner_sale">
+              
+                <div class="banner_sale_img">
+                    <img src="../view/layout/img/banner-sale/FASHION .png" alt="" srcset="">
+                    <div class="banner_sale_img_btn">
+                            <a href="">
+                                <input type="button" value="See more">
+                            </a>
+                    </div>
+                </div>
+            </section>
+                <!-- kết thúc banner sale trong tháng -->
+            <!-- phần sản phẩm nổi bật -->
+            <section id="sale_products">
+                <div class="sale_products">
+                        <div class="grid">
+                            <header class="sale_products_header">
+                                <h3 class="sale_products_header_txt">sale product</h3>
+                            </header>
+                            <article class="sale_products_article">
+                                <!-- phần nav  -->
+                                    <nav class="sale_products_nav">
+                                        <!-- phần list sản phẩm  -->
+                                            <div class="sale_products_list">
+                                                <div class="sale_products_item">
+                                                        <div class="sale_products_img">
+                                                            <img src="../view/layout/img/product/Red_LCPSPACU345UR01NOSS24_1.jpg" alt="hình ảnh sản phẩm" srcset="" class="sale_products_img_product">
+                                                            <div class="sale_products_add">
+                                                                <a href="">
+                                                                    <i class="fa-solid fa-cart-plus"></i>
+                                                                    <span>Thêm</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <a href="" class="sale_products_link">
+                                                            <span class="sale_products_txt">Hình ảnh sản phẩm </span>
+                                                        </a>
+                                                        <div class="price">
+                                                            <strong class="price_now">200000VND</strong>
+                                                            <s class="price_old">400000VND</s>
+                                                        </div>
+                                                </div>
+                                                <div class="sale_products_item">
+                                                    <div class="sale_products_img">
+                                                        <img src="../view/layout/img/product/Red_LCPSPACU345UR01NOSS24_1.jpg" alt="hình ảnh sản phẩm" srcset="" class="sale_products_img_product">
+                                                        <div class="sale_products_add">
+                                                            <a href="">
+                                                                <i class="fa-solid fa-cart-plus"></i>
+                                                                <span>Thêm</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <a href="" class="sale_products_link">
+                                                        <span class="sale_products_txt">Hình ảnh sản phẩm </span>
+                                                    </a>
+                                                    <div class="price">
+                                                        <strong class="price_now">200000VND</strong>
+                                                        <s class="price_old">400000VND</s>
+                                                    </div>
+                                                </div>
+                                                <div class="sale_products_item">
+                                                    <div class="sale_products_img">
+                                                        <img src="../view/layout/img/product/Red_LCPSPACU345UR01NOSS24_1.jpg" alt="hình ảnh sản phẩm" srcset="" class="sale_products_img_product">
+                                                        <div class="sale_products_add">
+                                                            <a href="">
+                                                                <i class="fa-solid fa-cart-plus"></i>
+                                                                <span>Thêm</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <a href="" class="sale_products_link">
+                                                        <span class="sale_products_txt">Hình ảnh sản phẩm </span>
+                                                    </a>
+                                                    <div class="price">
+                                                        <strong class="price_now">200000VND</strong>
+                                                        <s class="price_old">400000VND</s>
+                                                    </div>
+                                                </div>
+                                                <div class="sale_products_item">
+                                                    <div class="sale_products_img">
+                                                        <img src="../view/layout/img/product/Red_LCPSPACU345UR01NOSS24_1.jpg" alt="hình ảnh sản phẩm" srcset="" class="sale_products_img_product">
+                                                        <div class="sale_products_add">
+                                                            <a href="">
+                                                                <i class="fa-solid fa-cart-plus"></i>
+                                                                <span>Thêm</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <a href="" class="sale_products_link">
+                                                        <span class="sale_products_txt">Hình ảnh sản phẩm </span>
+                                                    </a>
+                                                    <div class="price">
+                                                        <strong class="price_now">200000VND</strong>
+                                                        <s class="price_old">400000VND</s>
+                                                    </div>
+                                                 </div>
+                                                 <div class="sale_products_item">
+                                                    <div class="sale_products_img">
+                                                        <img src="../view/layout/img/product/Red_LCPSPACU345UR01NOSS24_1.jpg" alt="hình ảnh sản phẩm" srcset="" class="sale_products_img_product">
+                                                        <div class="sale_products_add">
+                                                            <a href="">
+                                                                <i class="fa-solid fa-cart-plus"></i>
+                                                                <span>Thêm</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <a href="" class="sale_products_link">
+                                                        <span class="sale_products_txt">Hình ảnh sản phẩm </span>
+                                                    </a>
+                                                    <div class="price">
+                                                        <strong class="price_now">200000VND</strong>
+                                                        <s class="price_old">400000VND</s>
+                                                    </div>
+                                                 </div>
+                                                 <div class="sale_products_item">
+                                                    <div class="sale_products_img">
+                                                        <img src="../view/layout/img/product/Red_LCPSPACU345UR01NOSS24_1.jpg" alt="hình ảnh sản phẩm" srcset="" class="sale_products_img_product">
+                                                        <div class="sale_products_add">
+                                                            <a href="">
+                                                                <i class="fa-solid fa-cart-plus"></i>
+                                                                <span>Thêm</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <a href="" class="sale_products_link">
+                                                        <span class="sale_products_txt">Hình ảnh sản phẩm </span>
+                                                    </a>
+                                                    <div class="price">
+                                                        <strong class="price_now">200000VND</strong>
+                                                        <s class="price_old">400000VND</s>
+                                                    </div>
+                                                </div>
+                                                <div class="sale_products_item">
+                                                    <div class="sale_products_img">
+                                                        <img src="../view/layout/img/product/Red_LCPSPACU345UR01NOSS24_1.jpg" alt="hình ảnh sản phẩm" srcset="" class="sale_products_img_product">
+                                                        <div class="sale_products_add">
+                                                            <a href="">
+                                                                <i class="fa-solid fa-cart-plus"></i>
+                                                                <span>Thêm</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <a href="" class="sale_products_link">
+                                                        <span class="sale_products_txt">Hình ảnh sản phẩm </span>
+                                                    </a>
+                                                    <div class="price">
+                                                        <strong class="price_now">200000VND</strong>
+                                                        <s class="price_old">400000VND</s>
+                                                    </div>
+                                                 </div>
+                                                 <div class="sale_products_item">
+                                                    <div class="sale_products_img">
+                                                        <img src="../view/layout/img/product/Red_LCPSPACU345UR01NOSS24_1.jpg" alt="hình ảnh sản phẩm" srcset="" class="sale_products_img_product">
+                                                        <div class="sale_products_add">
+                                                            <a href="">
+                                                                <i class="fa-solid fa-cart-plus"></i>
+                                                                <span>Thêm</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <a href="" class="sale_products_link">
+                                                        <span class="sale_products_txt">Hình ảnh sản phẩm </span>
+                                                    </a>
+                                                    <div class="price">
+                                                        <strong class="price_now">200000VND</strong>
+                                                        <s class="price_old">400000VND</s>
+                                                    </div>
+                                            </div>
+                                            </div>
+                                        <!-- kết thúc phần list sản phẩm  -->
+                                    </nav>
+                                <!-- kết thúc phần nav  -->
+                            </article>
+
+                            <footer class="sale_products_footer">
+                                <a href="">
+                                    <button>see more</button>
+                                </a>
+                            </footer>
+                        </div>
                 </div>
             </section>
             <!-- kết thúc phần sản phẩm nổi bật -->
-
         </div>
-        <footer id="footer"></footer>
+        <footer class="footer">
+            <div class="grid">
+                <div class="footer_list">
+                    <div class="footer_item">
+                        <div class="footer_item_img">
+                            <img src="../view/layout/img/logo/Untitled-1_page-0001-removebg-preview.png" alt="" srcset="">
+                        </div>                      
+                    </div>
+                    <div class="footer_item">
+                        <ul class="footer_menu_list">
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">Cửa hàng ASUZE</span>
+                            </li>
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">139E Nguyễn Trãi, Phường Bến Thành, Quận 1, HCM</span>
+                            </li>
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">842 Sư Vạn Hạnh, phường 12, quận 10, HCM</span>
+                            </li>
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">54 Mậu Thân, An Phú, quận Ninh Kiều, Cần Thơ</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_item">
+                        <ul class="footer_menu_list">
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">Liên hệ</span>
+                            </li>
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">Hotline 1900 633 028</span>
+                            </li>
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">Email for customer customercare@levents.asia</span>
+                            </li>
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">Email for recruitment hr-admin@levents.asia</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_item">
+                        <ul class="footer_menu_list">
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">Hỗ trợ</span>
+                            </li>
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">Easy shopping</span>
+                            </li>
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">Tài khoản</span>
+                            </li>
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">Hướng dẫn đo size</span>
+                            </li>
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">Chính sách đổi trả</span>
+                            </li>
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">Chính sách vận chuyển</span>
+                            </li>
+                            <li class="footer_menu_item">
+                                <span class="footer_menu_txt">Chính sách membership</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_information">
+                <p>Copyright © FASHION ASURE. All copyrights are reserved. Designed by Nina.vn</p>
+            </div>
+        </footer>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.9/glider.min.js" integrity="sha512-4Y5AXHQsKRWv/566s/2jHXVBo2J4xNpapJJeaVGSbSEbHroH82lNN8y9dxbI9j5q0O9uzef5yRy5glBvfO941g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="../view/layout/js/icon_search.js"></script>
 <script src="../view/layout/js/typing.js"></script>
 <script src="../view/layout/js/slide.js"></script>
+<script src="../view/layout/js/glide.js"></script>
 </html>
