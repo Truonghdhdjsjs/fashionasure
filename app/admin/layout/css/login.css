@@ -1,0 +1,131 @@
+.login_header
+{
+    background-color: #1c1f22;
+    padding: 6px;
+}
+.login_nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_link
+{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+    transition: all 0.3s;
+}
+.login_nav_icon
+{
+    color: #fff;
+}
+.login_nav_txt
+{
+    color: #fff;
+}
+.form_article
+{
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #e9ecef;
+    /* border: 1px solid #000; */
+}
+.boder_form
+{
+    border: 1px solid transparent ;
+    padding: 20px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:  10px 0;
+    background-color: #fff;
+    border-radius: 2px;
+}
+.boder_form_txt
+{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.2px;
+}
+.boder_form_input
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px 0;
+    
+}
+.boder_form_table
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   gap: 10px 0;
+    
+}
+.boder_form_tr
+{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 6px 4px;
+    border-radius: 2px;
+}
+.border
+{
+    width: 215px;
+}
+.input_user
+{
+    border: none;
+   height: 30px;
+   margin-left: 10px;
+    outline: none;
+}
+.input_pass
+{
+    border: none;
+    height: 30px;
+    margin-left: 10px;
+     outline: none;
+}
+.noote_erorr
+{
+    border: 1px solid transparent;
+    max-width: 300px;
+    /* color:#fff; */
+    background-color: #f8d7da;
+    padding: 10px 20px;
+    border-radius: 2px;
+    display: none;
+}
+.show
+{
+   display: block; 
+}
+.txtsbt
+{
+  padding: 10px 74px;
+  border: none;
+  background-color: #cb303f;
+  color: #fff;
+  border-radius: 2px;
+  transition: 0.3 ease;
+}
+.txtsbt:hover
+{
+    background-color: #ff3c4f;
+    cursor: pointer;
+}
