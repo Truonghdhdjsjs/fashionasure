@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrator ASURE</title>
     <link rel="stylesheet" href="../admin/layout/css/default.css">
+    <link rel="stylesheet" href="../admin/layout/css/lv1.css">
     <link rel="stylesheet" href="../admin/layout/css/control_infromation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -225,7 +226,7 @@
                 </div>
             </section>
             <!-- --------------bẳng điều khiển-------------------- -->
-            <section class="dashboard">
+            <!-- <section class="dashboard">
                 <header class="dashboard_header">
                     <p>bảng điều khiển</p>
                 </header>
@@ -275,8 +276,59 @@
                         </a>
                     </div>
                 </nav>
-            </section>
+            </section> -->
             <!-- -------------------kết thúc bảng điều khiển-------------- -->
+             <section id=" level_1_business_category">
+                <header class="level_1_business_category_header">
+                    <a href="../admin/index.html">bảng điều khiển</a>
+                    /
+                    <a href="../admin/catologylv1.html">danh mục cấp 1</a>
+                </header>
+                <nav class="level_1_business_category_nav">
+                    <form action="" method="post">
+                        <div class="input_tool">
+                            <div class="add_product">
+                               <a href="">
+                                    <i class="fa-solid fa-plus"></i>
+                                    <span>Thêm mới</span>
+                               </a>
+                            </div>
+                            <div class="dellet_product">
+                                <a href="">
+                                    <i class="fa-regular fa-trash-can"></i>
+                                    <span>Xóa tất cả</span>
+                               </a>
+                            </div>
+                            <div class="search_product">
+                                <input type="search" name="txtsearch" id="txtsearch" placeholder="Tìm kiếm">
+                                <input type="submit" value="Nhập" onclick="return btnsearch()" id="search">
+                                <div class="error"></div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="category">
+                        <div class="category_txt">
+                            <span class="category_txt_name">Danh mục cấp 1</span>
+                        </div>
+                        <table class="table_category">
+                            <tr class="table_tr">
+                                <th>STT</th>
+                                <th>Tiêu đề</th>
+                                <th>Nổi bật </th>
+                                <th>Hiển thị</th>
+                                <th>Thao tác</th>
+                            </tr>
+                            <tr class="table_tr">
+                                <td>STT</td>
+                                <td><span>Sản phẩm nhập khẩu</span></td>
+                                <td><input type="checkbox" name="txtoutstanding" id="txtoutstanding"> </td>
+                                <td><input type="checkbox" name="txtdisplay" id="txtdisplay"> </td>
+                                <td class="table_linl"><a href="" class="edit"><i class="fa-solid fa-pen-to-square" class="delete"></i></a>|<a href=""><i class="fa-regular fa-trash-can"></i></a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </nav>
+             </section>
         </div>
        
     </div>
@@ -284,4 +336,5 @@
 <script src="../admin/layout/js/sidebar.js"></script>
 <script src="../admin/layout/js/setting_tool.js"></script>
 <script src="../admin/layout/js/icon_notification.js"></script>
+<script src="../admin/layout/js/errorsearch.js"></script>
 </html>

@@ -1,0 +1,107 @@
+#level_1_business_category
+{
+    padding: 10px 10px;
+}
+.level_1_business_category_header
+{
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    padding: 10px 20px;
+}
+.level_1_business_category_header a
+{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+}
+.input_tool
+{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px ;
+}
+.add_product a,
+.dellet_product a
+{
+    text-decoration: none;
+    background-color: #217cdd;
+    padding: 6px ;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap:0 10px;
+    border-radius: 2px;
+}
+.dellet_product a
+{
+    background-color: #cc3543;
+}
+.search_product
+{
+    display: flex;
+    align-items: center;
+}
+#txtsearch
+{
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+#search
+{
+    border: none;
+    padding: 10px;
+    background-color: #217cdd;
+    color: #fff;
+    cursor: pointer;
+}
+.category
+{
+    padding-left: 10px;
+    background-color: #fff;
+    padding: 10px 10px;
+}
+.category_txt_name
+{
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+.table_category
+{
+    width: 1220px;
+    /* border: 1px solid #000; */
+    border-radius: 2px ;
+    padding: 10px 0;
+}
+.table_tr
+{
+    border: 6px solid #000;
+    /* padding: 50px 0; */
+    transition: all 0.5 ease;
+}
+.table_tr:hover
+{
+    background-color: #dadada;
+    cursor: pointer;
+}
+.table_category tr td
+{
+    /* margin: 0 auto; */
+    text-align: center;
+    padding: 15px 0;
+    border: 1px solid #fbfbfb;
+    font-size: 1.2rem;
+}
+.table_linl .edit
+{
+   color: #0056b3;
+}
+.delete
+{
+    color: #a71d2a;
+}

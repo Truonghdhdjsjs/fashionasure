@@ -207,6 +207,8 @@
     /* width: calc(100%-3260px); */
     height: 100vh;
     transition: all .5s ease;
+    background-color: #f4f6f9;
+    width: 1220px;
   
 }
 .home .toggle_silebar
@@ -229,3 +231,184 @@
    margin-left: 15px;
    /* text-transform: capitalize; */
 }
+.home
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1220px;
+    background-color: #ffffff;
+}
+.tool_Notification
+{
+    display: flex;
+    align-items: center;
+    gap:0 20px
+}
+.too_setting
+{
+    position: relative;
+}
+.setting_information
+{
+    position: absolute;
+    display: none;
+}
+ #icon_seting
+{
+    cursor: pointer;
+}
+.setting_information_list
+{
+    list-style: none;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 150px;
+    padding: 10px;
+    border: 1px;
+   /* transform: translateX(-120px); */
+   background-color: #e2e2e2;
+   border-radius: 2px;
+   gap: 10px 0;
+   
+   
+}
+
+.setting_information_list li a{
+    text-decoration: none;
+    display: flex;
+    align-items: start;
+    gap: 0 4px;
+    cursor: pointer;
+}
+
+
+.tool_bell
+{
+    position: relative;
+}
+.notification_contatc
+{
+    position: absolute;
+    display: none;
+}
+#icon_bell
+{
+    transition: all 1s ease;
+    cursor: pointer;
+}
+.notification_contatc_list
+{
+    width: 90px;
+    padding:10px ;
+    list-style: none;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px 0;
+    background-color: #e2e2e2;
+    border-radius: 2px;
+}
+.notification_contatc_item a{
+    display: flex;
+    align-items: center;
+    gap: 0 6px;
+    text-decoration: none;
+}
+.notification_contatc_item a span
+{
+    text-transform: capitalize;
+}
+.show
+{
+    display: block;
+}
+/* bẳng điều khiển */
+.dashboard
+{
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px 0;
+}
+.dashboard_header
+{
+    margin-left: 20px ;
+}
+.dashboard_header p
+{
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.dashboard_header_tool
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.configuration_website a,
+.account a,
+.change_password a,
+.contact_letter a
+{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0 10px ;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 6px ;
+    border-radius: 2px;
+    width: 250px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
+.configuration_website_icon i,
+.account_website_icon i,
+.change_password_website_icon i,
+.contact_letter_website_icon i
+{
+    font-size: 2.2rem;
+    background-color: #007bfe;
+    color: #fff;
+    padding: 20px;
+}
+.account_website_icon i
+{
+    background-color: #dc3545;
+}
+.change_password_website_icon i
+{
+    background-color: #28a745;
+}
+.contact_letter_website_icon i
+{
+    background-color: #17a2b8;
+}
+.configuration_website_txt
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.configuration_website_txt h5,
+.account_website_txt h5,
+.change_password_website_txt h5,
+.contact_letter_website_txt h5
+{
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+.configuration_website_txt span,
+.account_website_txt h5,
+.change_password_website_txt h5,
+.contact_letter_website_txt h5
+{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+/* kết thúc bẳng điều khiển */
