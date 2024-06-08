@@ -1,4 +1,4 @@
-.app
+#full_zone
 {
     display: grid;
    grid-template-columns: 30% 70%;
@@ -31,9 +31,10 @@
 .logo_img
 {
     width: 150px;
-    object-fit: cover;
+    object-fit: contain;
     margin: 0 auto;
     padding: 10px 0;
+    position: relative;
 }
 .logo_box:hover
 {
@@ -208,7 +209,7 @@
     height: 100vh;
     transition: all .5s ease;
     background-color: #f4f6f9;
-    width: 1220px;
+    width: 1080px;
   
 }
 .home .toggle_silebar
@@ -236,7 +237,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1220px;
+    width: 1080px;
     background-color: #ffffff;
 }
 .tool_Notification
@@ -412,3 +413,9 @@
     text-transform: capitalize;
 }
 /* kết thúc bẳng điều khiển */
+.tool_logout span
+{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000;
+}
