@@ -6,20 +6,27 @@
                         <a href="../admin/catologylv1.html">Sửa danh mục cấp 1</a>
                     </header>
                     <nav class="level_1_business_pluscatalog">
-                        <form action="" method="post">
+                        <form action="../admin/index.php?admin=edit_catalogylv1" method="post">
                             <div class="tool_plus">
                                 <div class="tool_save" onclick="return save_catologo_lv1()">
                                     <a href="" >
-                                        <i class="fa-solid fa-floppy-disk"></i>
-                                        <span>Lưu sản phẩm</span>
+                                        <label for="txtsubmit">
+                                            <i class="fa-solid fa-floppy-disk"></i>
+                                            <span>Lưu sản phẩm</span>
+                                        </label>
+                                        <input type="submit" hidden id="txtsubmit" name="txtsubmit" >
                                     </a>
+    
                                 </div>
                                 <div class="tool_reset">
-                                    <i class="fas fa-undo"></i>
-                                    <input type="reset" value="Làm lại">
+                                    <label for="reset">
+                                        <i class="fas fa-undo"></i>
+                                        <span>Nhập lại</span>
+                                    </label>
+                                    <input type="reset" value="Làm lại" id="reset" hidden>
                                 </div>
                                 <div class="tool_out" onclick=" return logout_plus()">
-                                    <a  href="">
+                                    <a  href="../admin/index.php?admin=danhmuccap1">
                                         <i class="fa-solid fa-right-from-bracket"></i>
                                         <span>Thoát</span>
                                     </a>
@@ -56,7 +63,8 @@
                                 </tr>
                                 <tr class="tr_form">
                                     <td><p>Tiêu đề</p></td>
-                                    <td><input type="text" name="txttitle" id="txttitle" placeholder="Tiêu đề (vi)"></td>
+                                    <td><input type="text" name="tendm" id="txttitle" placeholder="Tiêu đề (vi)" value="<?= $getone_catalogo[0]['tendm']?>"></td>
+                                    <td><input type="hidden" name="txtid" id="txtid" placeholder="Tiêu đề (vi)" value="<?= $getone_catalogo[0]['id']?>"></td>
                                 </tr>
                                </table>
                             </div>

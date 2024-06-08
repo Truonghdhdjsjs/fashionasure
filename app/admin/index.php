@@ -38,10 +38,29 @@
             include_once('../admin/catologylv1.php');
             break;
          case 'edit_catalogylv1':
+            if(isset($_GET['id']))
+            {
+                  $id=$_GET['id'];
+                  $getone_catalogo=getone_catalog($id);
+                  $conn=connectDB();
+                  $kq=getall_catalogylv1();
+                  include_once('../admin/editlv1.php');
+            }
+            if(isset($_POST['txtsubmit'])&&($_POST['txtsubmit']))
+            {
+                  $id=$_POST['txtid'];
+                  $tendm=$_POST['tendm'];
+                  update_catalogylv1($id,$tendm);
+                  $conn=connectDB();
+                  $kq=getall_catalogylv1();
+                  include_once('../admin/catologylv1.php');
+            }
+           break;
+         case 'delall':
             $conn=connectDB();
             $kq=getall_catalogylv1();
-            include_once('../admin/editlv1.php');
-           break;
+            delall();
+            include_once('../admin/catologylv1.php');
          case 'danhmuccap2':
             # code...
             include_once('../admin/categorylv2..php');

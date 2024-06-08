@@ -51,7 +51,7 @@
                                                         <td><input type="checkbox" name="txtoutstanding" id="txtoutstanding"> </td>
                                                         <td><input type="checkbox" name="txtdisplay" id="txtdisplay"> </td>
                                                         <td class="table_linl">  
-                                                        <a href="../admin/index.php?admin=edit_catalogylv1" class="edit"><i class="fa-solid fa-pen-to-square" class="delete"></i></a>
+                                                        <a href="../admin/index.php?admin=edit_catalogylv1&id='.$dm['id'].'" class="edit"><i class="fa-solid fa-pen-to-square" class="delete"></i></a>
                                                         |
                                                         <a href="../admin/index.php?admin=delete_dm&id='.$dm['id'].'"><i class="fa-regular fa-trash-can"></i></a>
                                                         </td>

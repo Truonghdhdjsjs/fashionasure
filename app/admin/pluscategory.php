@@ -25,7 +25,7 @@
                                     <input type="reset" value="Làm lại" id="btnreset" hidden>
                                 </div>
                                 <div class="tool_out" onclick=" return logout_plus()">
-                                    <a  href="">
+                                    <a  href="../admin/index.php?admin=danhmuccap1">
                                         <i class="fa-solid fa-right-from-bracket"></i>
                                         <span>Thoát</span>
                                     </a>
@@ -64,6 +64,7 @@
                                     <td><p>Tiêu đề</p></td>
                                     <td><input type="text" name="txttitle" id="txttitle" placeholder="Tiêu đề (vi)"></td>
                                 </tr>
+                            
                                </table>
                             </div>
                         </form>
