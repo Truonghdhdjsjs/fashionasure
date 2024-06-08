@@ -1,0 +1,130 @@
+.tool_plus
+{
+    display: flex;
+    align-items: center;
+    padding-left:10px ;
+    gap:  0 10px;
+}
+.tool_save a,
+.tool_out a
+{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 0 6px;
+    color: #fff;
+    padding: 8px;
+    cursor: pointer;
+}
+.tool_save a
+{
+    background-color: #1888ff;
+}
+.tool_out a
+{
+    background-color: #de4150;
+}
+.tool_reset 
+{
+    border: none;
+    background-color: #727a82;
+    padding: 8px;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0 6px;
+}
+.tool_reset input
+{
+    border: none;
+    background-color: #727a82;
+    color: #fff;
+}
+.table_form
+{
+    background-color: #fff;
+    padding-left:20px ;
+    padding-top: 20px;
+}
+.notification-plus
+{
+    display: flex;
+    align-items: start;
+    gap: 0 10px;
+    font-size: 1.3rem;
+}
+.notification-plus .text
+{
+    font-weight: 600;
+}
+.table_plus_catolog
+{
+    border: 1px solid #e4e4e4;
+    /* display: flex;
+    align-items: start;
+    flex-direction: row; */
+    width: 1200px;
+    padding: 10px;
+    border-radius: 2px;
+}
+.table_plus_catolog tr
+{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 6px 0;
+}
+.table_plus_catolog tr td span
+{
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.25px ;
+    line-height: 24px;
+}
+.table_plus_catolog tr td span::after
+{
+    content: ':http://fasion-asure';
+    margin-left: 6px;
+}
+.table_plus_catolog tr td input
+{
+    /* border: none; */
+    border:1px solid #ced4da ;
+    width: calc(1200px - 10%);
+    padding: 10px;
+}
+.title_txt
+{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 10px 0;
+}
+.checkbox_table_display
+{
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+}
+.checkbox_tabel_outstanding
+{
+    display: flex;
+    align-items: center;
+    gap: 0 6px;
+}
+.checkbox_tabel_outstanding span
+{
+    font-weight: 500;
+    letter-spacing: 0.25px;
+}
+.tr_form
+{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+.tr_form td p
+{
+    font-size: 1.2rem;
+}
