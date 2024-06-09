@@ -21,9 +21,11 @@
                                </a>
                             </div>
                             <div class="search_product">
-                                <input type="search" name="txtsearch" id="txtsearch" placeholder="Tìm kiếm" maxlength="15">
-                                <input type="submit" value="Nhập" onclick="return btnsearch()" id="search">
-                                <div class="error"></div>
+                                <form action="../admin/index.php?admin=timkiemdanhmuc" method="post">
+                                    <input type="search" name="txtsearch" id="txtsearch" placeholder="Tìm kiếm" maxlength="15">
+                                    <input type="submit" value="Nhập" onclick="return btnsearch()" id="search" name="txtsbt">
+                                    <div class="error"></div>
+                                </form>
                             </div>
                         </div>
                     </form>
@@ -42,7 +44,7 @@
                             <?php
                                     if(isset($kq)&&count($kq))
                                     {
-                                        $i=0;
+                                        $i=1;
                                         foreach($kq as $dm)
                                         {
                                                 echo' <tr class="table_tr">

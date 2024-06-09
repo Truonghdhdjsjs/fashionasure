@@ -1,4 +1,11 @@
 <?php
+    function search_catolahy($search)
+    {
+        $conn = connectDB();
+        $sql = "SELECT * FROM tb_danhmucs WHERE tendm LIKE '%".$search."%'";
+        $result = $conn->query($sql);
+        return $result; // Trả về kết quả cho việc xử lý sau này
+    }
     function  delall()
     {
         $conn=connectDB();

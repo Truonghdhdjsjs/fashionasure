@@ -9,7 +9,7 @@
                     <form action="" method="post">
                         <div class="catology_lv2_tool">
                             <div class="catology_lv2_tool_plus">
-                                <a href="">
+                                <a href="../admin/index.php?admin=plusproduct">
                                     <i class="fa-solid fa-plus"></i>
                                     <span>Thêm mới</span>
                                 </a>
@@ -28,9 +28,16 @@
                         </div>
                         <div class="catology_lv2_select">
                             <select name="txtselext" id="txtselext">
-                                 <option value="Chọn danh mục" selected>Chọn danh mục</option>
-                                 <option value="Quần kaki">Quần kaki</option>
-                                 <option value="Áo thun">Áo thun</option>
+                                 <option value="0" selected>Chọn danh mục</option>
+                                <?php
+                                    if (isset($catalogy)&&count($catalogy)) {
+                                        # code...
+                                        foreach ($catalogy as $dm ) {
+                                            # code...
+                                            echo ' <option value="'.$dm['id'].'">'.$dm['tendm'].'</option>';
+                                        }
+                                    }
+                                ?>
                             </select>
                         </div>
                         <div class="tb_category_lv2">
@@ -46,14 +53,26 @@
                                     <th>Nổi bật</th>
                                     <th>Thao tác</th>
                                 </tr>
-                               <tr>
-                                    <td></td>
-                                    <td>sss</td>
-                                    <td><span>Nước lau nhà mới</span></td>
-                                    <td><input type="checkbox" name="txtdisplay" id="txtdisplay"></td>
-                                    <td><input type="checkbox" name="txtoutstanding" id="txtoutstanding"></td>
-                                    <td><a href="" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>|<a href="" class="trash"><i class="fa-solid fa-trash-can"></i></a></td>
-                               </tr>
+                                <?php
+                                    if(isset($kq)&&count($kq)>0)
+                                    {
+                                        $i=1;
+                                        foreach($kq as $product)
+                                        {
+                                            echo' <tr>
+                                                <td>'.$i.'</td>
+                                                <td><img src="'.$product['img'].'" style="position: relative; width:50px;  object-fit: cover;  height: 50px;"></td>
+                                                <td>'.$product['tensp'].'</td>
+                                                <td><input type="checkbox" name="txtdisplay" id="txtdisplay"></td>
+                                                <td><input type="checkbox" name="txtoutstanding" id="txtoutstanding"></td>
+                                                <td> <a href="../admin/index.php?admin=editptoduct&id='.$product['id'].'" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                                                |
+                                                <a href="../admin/index.php?admin=delproduct&id='.$product['id'].'" class="trash"><i class="fa-solid fa-trash-can"></i></a></td>
+                                                  </tr>';
+                                            $i++;
+                                        }
+                                    }
+                                ?>
                             </table>
                         </div>
                     </form>
