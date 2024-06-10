@@ -1,3 +1,25 @@
+<?php
+    session_start();
+    ob_start();
+    include_once("../mode/connect.php");
+    include_once("../mode/user.php");
+    if (isset($_POST['txtsbt'])&&($_POST['txtsbt'])) {
+        # code...
+        $user=$_POST['user'];
+        $pass=$_POST['password'];
+        $role=checkuser($user,$pass);
+        $_SESSION['role']=$role;
+        if ($role==1) {
+            # code...
+            header('location:../admin/index.php');
+        }
+        else
+        {
+            header('location:../admin/login.php');
+        }
+    }
+    // var_dump($role);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +42,7 @@
         </header>
         <div class="wapper">
           <article class="form_article">
-            <form action="" method="post">
+            <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
                 <div class="boder_form">
                     <header class="boder_form_header">
                         <p class="boder_form_txt">đăng nhập hệ thống</p>
@@ -29,11 +51,11 @@
                         <div class="boder_form_table">
                             <div class="boder_form_tr border">
                                 <div class="boder_form_td"><i class="fa-regular fa-user"></i></div>
-                                <div class="boder_form_td"><input type="text" name="txtuser" id="txtuser" placeholder="Tài khoản *" maxlength="10" autocomplete="off" class="input_user"></div>
+                                <div class="boder_form_td"><input type="text" name="user" id="txtuser" placeholder="Tài khoản *" maxlength="10" autocomplete="off" class="input_user"></div>
                             </div>
                             <divr class="boder_form_tr">
                                 <div class="boder_form_td"><i class="fa-solid fa-lock"></i></div>
-                                <div class="boder_form_td"><input type="password" name="txtpass" id="txtpass" placeholder="Mật khẩu *" maxlength="10" autocomplete="off" class="input_pass"></div>
+                                <div class="boder_form_td"><input type="password" name="password" id="txtpass" placeholder="Mật khẩu *" maxlength="10" autocomplete="off" class="input_pass"></div>
                                 <div class="boder_form_td"><i class="fa-solid fa-eye"  id="eyes" class="eyes_close"></i></div>
                             </divr>
                         </div>
@@ -41,6 +63,7 @@
                             <input type="submit" value="Đăng nhập" name="txtsbt" id="txtsbt" class="txtsbt" onclick="return checkform()">
                         </div>
                         <p class="noote_erorr"></p>
+
                     </nav>
                 </div>
             </form>

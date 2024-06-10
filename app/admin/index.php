@@ -1,4 +1,8 @@
 <?php
+   session_start();
+   ob_start();
+   if (isset($_SESSION['role'])&&($_SESSION['role']===1)) {
+      # code...
    include_once('../mode/connect.php');
    include_once('../mode/catalogylv1.php');
    include_once('../mode/product.php');
@@ -138,30 +142,47 @@
             }
             if (isset($_POST['txtsub'])&&($_POST['txtsub'])) 
             {
+               // $getone_product=editptoduct($id);
+               $catalogy= getall_catalogylv1();
                $conn=connectDB();
                $kq = getall_product();
-               $catalogy= getall_catalogylv1();
-               $getone_product=editptoduct($id);
-               $id = $_POST['id'];
+               $id=$_POST['id'];
                $iddm=$_POST['iddm'];
                $tensp=$_POST['tensp'];
                $mota=$_POST['mota'];
                $price=$_POST['price'];
                $sale=$_POST['price_old'];
-               // $target_dir = "../uploads/";
-               // $target_file = $target_dir . basename($_FILES["img"]["name"]);
-               // $img=$target_file;
-               // $uploadOk = 1;
-               // // if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-               // // && $imageFileType != "gif" ) {
-               // //   echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-               // //   $uploadOk = 0;
-               // // }
-               // move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);
-               updateproduct($tensp,$mota,$price,$sale,$iddm,$id);
+               $target_dir = "../uploads/";
+               $target_file = $target_dir . basename($_FILES["img"]["name"]);
+               $img=$target_file;
+               $uploadOk = 1;
+               // if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+               // && $imageFileType != "gif" ) {
+               //   echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+               //   $uploadOk = 0;
+               // }
+               move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);
+               updateproduct($tensp,$mota,$price,$sale,$iddm,$id,$img);
                include_once('../admin/product.php');
             }
             break;
+            case 'delallproduct':
+               # code...
+               delallproduct();
+               $conn=connectDB();
+               $kq = getall_product();
+               $catalogy= getall_catalogylv1();
+               include_once('../admin/product.php');
+               break;
+               case 'logout':
+                  # code...
+                  if(isset($_SESSION['role']))
+                  {
+                      unset($_SESSION['role']);
+                      header('location: ../admin/login.php');
+                  }
+                  break;
+                  
          default:
             # code...
             include_once('../admin/body.php');
@@ -172,5 +193,7 @@
    {
       include_once('../admin/body.php');
    }
-   include_once('../admin/footer.php')
+   include_once('../admin/footer.php');
+   }
+
 ?>

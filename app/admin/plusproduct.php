@@ -8,9 +8,6 @@
                     <nav class="level_1_business_pluscatalog">
                         <form action="../admin/index.php?admin=plusproducttool" method="post" enctype="multipart/form-data">
                                 <div class="form_catologo">  
-                                <?php
-                                var_dump($kq)
-                                ?>
                                 <div class="zone_1">
                                     <div class="tool_plus">
                                         <div class="tool_save" onclick="return save_catologo_lv1()">

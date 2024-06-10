@@ -15,7 +15,7 @@
                                 </a>
                             </div>
                             <div class="catology_lv2_tool_delete">
-                                <a href="">
+                                <a href="../admin/index.php?admin=delallproduct">
                                     <i class="fa-solid fa-trash-can"></i>
                                     <span>Xóa tất cả</span>
                                 </a>

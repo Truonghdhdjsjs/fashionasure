@@ -1,20 +1,26 @@
 <?php
 
        
-
-    function updateproduct($tensp,$mota,$price,$sale,$iddm,$id)
+    function delallproduct()
+    {
+        $conn =connectDB();
+        $sql= " DELETE  FROM tb_sanpham";
+        $conn->exec($sql);
+    }
+    function updateproduct($tensp,$mota,$price,$sale,$iddm,$id,$img)
     {
         $conn=connectDB();
-        // if ($img==="") {
+        if ($img==="") {
             # code...
-            $sql = "UPDATE tb_sanpham SET tensp='".$tensp."', mota='".$mota."',price='".$price."',price_old='".$sale."',iddm='".$iddm."' WHERE id=".$id;
-        // }
-        // else
-        // {
-        //     $sql = "UPDATE tb_sanpham SET tensp='".$tensp."', mota='".$mota."',price='".$price."',price_old='".$sale."',iddm='".$iddm."',img='".$img."' WHERE id=".$id;
-        // }
+            $sql = "UPDATE tb_sanpham SET tensp='".$tensp."', mota='".$mota."',price='".$price."',price_old='".$sale."',iddm='".$iddm."' WHERE id='$id'";
+        }
+        else
+        {
+            $sql = "UPDATE tb_sanpham SET tensp='".$tensp."', mota='".$mota."',price='".$price."',price_old='".$sale."',iddm='".$iddm."',img='".$img."' WHERE id=".$id;
+        }
         $stmt = $conn->prepare($sql);
-        $stmt->execute();
+        // $stmt->execute();
+        // $stmt->execute();
         // execute the query
        
     }
