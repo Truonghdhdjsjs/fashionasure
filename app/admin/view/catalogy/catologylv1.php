@@ -9,13 +9,13 @@
                     <form action="" method="post">
                         <div class="input_tool">
                             <div class="add_product">
-                               <a href="">
+                               <a href="../admin/index.php?admin=pluscotalary">
                                     <i class="fa-solid fa-plus"></i>
                                     <span>Thêm mới</span>
                                </a>
                             </div>
                             <div class="dellet_product">
-                                <a href="">
+                                <a href="../admin/index.php?admin=delcatalogy">
                                     <i class="fa-regular fa-trash-can"></i>
                                     <span>Xóa tất cả</span>
                                </a>
@@ -39,13 +39,22 @@
                                 <th>Hiển thị</th>
                                 <th>Thao tác</th>
                             </tr>
-                            <tr class="table_tr">
-                                <td>STT</td>
-                                <td><span>Sản phẩm nhập khẩu</span></td>
-                                <td><input type="checkbox" name="txtoutstanding" id="txtoutstanding"> </td>
-                                <td><input type="checkbox" name="txtdisplay" id="txtdisplay"> </td>
-                                <td class="table_linl"><a href="" class="edit"><i class="fa-solid fa-pen-to-square" class="delete"></i></a>|<a href=""><i class="fa-regular fa-trash-can"></i></a></td>
-                            </tr>
+                            <?php
+                                if (isset($getall)&& count($getall)>0) {
+                                    $i=1;
+                                    foreach($getall as $dm)
+                                    {
+                                        echo' <tr class="table_tr">
+                                                <td>'.$i.'</td>
+                                                <td><span>'.$dm['tendm'].'</span></td>
+                                                <td><input type="checkbox" name="txtoutstanding" id="txtoutstanding"> </td>
+                                                <td><input type="checkbox" name="txtdisplay" id="txtdisplay"> </td>
+                                                <td class="table_linl"><a href="" class="edit"><i class="fa-solid fa-pen-to-square" class="delete"></i></a>|<a href=""><i class="fa-regular fa-trash-can"></i></a></td>
+                                            </tr>';
+                                            $i++;
+                                    }
+                                }
+                            ?>
                         </table>
                     </div>
                 </nav>

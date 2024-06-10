@@ -6,23 +6,26 @@
                         <a href="../admin/catologylv1.html">Sửa danh mục cấp 2</a>
                     </header>
                     <nav class="level_1_business_pluscatalog">
-                        <form action="" method="post" >
+                        <form action="../admin/index.php?admin=editdm2" method="post" >
                             <div class="form_catologo">
-
                                 <div class="zone_1">
                                     <div class="tool_plus">
                                         <div class="tool_save" onclick="return save_catologo_lv1()">
                                             <a href="" >
-                                                <i class="fa-solid fa-floppy-disk"></i>
-                                                <span>Lưu sản phẩm</span>
+                                                <label for="txtsub">
+                                                    <i class="fa-solid fa-floppy-disk"></i>
+                                                    <span>Lưu sản phẩm</span>
+                                                </label>
+                                                <input type="submit" value="" id="txtsub" hidden>
                                             </a>
+
                                         </div>
                                         <div class="tool_reset">
                                             <i class="fas fa-undo"></i>
                                             <input type="reset" value="Làm lại">
                                         </div>
                                         <div class="tool_out" onclick=" return logout_plus()">
-                                            <a  href="">
+                                            <a  href="../admin/index.php?admin=catalogy2">
                                                 <i class="fa-solid fa-right-from-bracket"></i>
                                                 <span>Thoát</span>
                                             </a>
@@ -37,7 +40,7 @@
                                             <tr>
                                                 <td><span>Đường dẫn mẫu(vi)</span></td>
                                                 <td>
-                                                    <input type="text" name="txtpath" id="txtpath" placeholder="Đường dẫn (vi)" maxlength="20">
+                                                    <input type="text" name="linkdanhmuccon" id="txtpath" placeholder="Đường dẫn (vi)" maxlength="20" value="<?= $getone[0]['linkdanhmuccon']?>">
                                                 </td>
                                             </tr> 
                                        </table>
@@ -59,27 +62,40 @@
                                         </tr>
                                         <tr class="tr_form">
                                             <td><p>Tiêu đề</p></td>
-                                            <td><input type="text" name="txttitle" id="txttitle" placeholder="Tiêu đề (vi)"></td>
+                                            <td><input type="text" name="tendm" id="txttitle" placeholder="Tiêu đề (vi)" value="<?= $getone[0]['tendm']?>"></td>
+                                            <td><input type="text" name="id" id="id" placeholder="Tiêu đề (vi)" value="<?= $getone[0]['id']?>" hidden ></td>
                                         </tr>
                                        </table>
+                                       <?php
+                                       var_dump($getone);
+                                       ?>
                                     </div>
                                 </div>
                                 <div class="zone_2">
                                     <div class="choose_cataloguy_lv2">
                                         <header><span>Danh mục cấp 1</span></header>
-                                        <select name="choose_cataloguy_lv2" id="choose_cataloguy_lv2">
+                                        <select name="iddm" id="choose_cataloguy_lv2">
                                             <option value="chọn danh mục" selected>chọn danh mục</option>
-                                            <option value="Quần kaki">Quần kaki</option>
-                                            <option value="Quần kaki">Quần kaki</option>
-                                            <option value="Quần kaki">Quần kaki</option>
+
+                                          <?php
+                                            if(isset($getall))
+                                            {
+                                                foreach ($getall as $dm ) {
+                                                    # code...
+                                                    echo' <option value="'.$dm['id'].'">'.$dm['tendm'].'</option>';
+                                                }
+                                            }
+                                          ?>
+                                       
                                         </select>
+                                        
                                     </div>
                                     <div class="upload_product_ctalogoy_lv2">
                                         <header class="upload_product_ctalogoy_lv2_header">
                                             <span>hình ảnh danh mục cấp 2</span>
                                             <div id="error"></div>
                                         </header>
-                                        <div class="zone_upload_img_catalogy_lv2">
+                                        <!-- <div class="zone_upload_img_catalogy_lv2">
                                             <label for="txtfiles" class="preview">
                                                 <div class="m">
                                                     <i class="fa-solid fa-cloud-arrow-up"></i>
@@ -87,7 +103,7 @@
                                                 </div>
                                             </label>
                                             <input type="file" name="txtfiles" id="txtfiles" value="Chọn hình" hidden>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>

@@ -40,21 +40,34 @@
                             <table class="table_category_lv2">
                                 <tr>
                                     <th>STT</th>
-                                    <th>Hình</th>
+                                   
                                     <th>Tiêu đề</th>
                                     <th>Hiển thị </th>
                                     <th>Nổi bật</th>
                                     <th>Thao tác</th>
                                 </tr>
-                               <tr>
-                                    <td></td>
-                                    <td><img src="" alt=""></td>
-                                    <td><span>Nước lau nhà mới</span></td>
-                                    <td><input type="checkbox" name="txtdisplay" id="txtdisplay"></td>
-                                    <td><input type="checkbox" name="txtoutstanding" id="txtoutstanding"></td>
-                                    <td><a href="" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>|<a href="" class="trash"><i class="fa-solid fa-trash-can"></i></a></td>
-                               </tr>
+                                <?php
+                                    if(isset($getall_catalogy2)&&count($getall_catalogy2)>0)
+                                    {
+                                        $i=1;
+                                        foreach($getall_catalogy2 as $dm2)
+                                        {
+                                            echo' <tr>
+                                                    <td>'.$i.'</td>                                    
+                                                    <td><span>'.$dm2['tendm'].'</span></td>
+                                                    <td><input type="checkbox" name="txtdisplay" id="txtdisplay"></td>
+                                                    <td><input type="checkbox" name="txtoutstanding" id="txtoutstanding"></td>
+                                                    <td><a href="../admin/index.php?admin=editdm2&id='.$dm2['id'].'" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>|<a href="" class="trash"><i class="fa-solid fa-trash-can"></i></a></td>
+                                            </tr>';
+                                            $i++;
+                                        }
+                                    }
+                                ?>
+                              
                             </table>
+                            <?php
+                                var_dump($getall_catalogy2);
+                            ?>
                         </div>
                     </form>
                 </nav>
