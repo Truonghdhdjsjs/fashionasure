@@ -16,7 +16,7 @@
                                                     <i class="fa-solid fa-floppy-disk"></i>
                                                     <span>Lưu sản phẩm</span>
                                                 </label>
-                                                <input type="submit" value="" id="txtsub" hidden>
+                                                <input type="submit" value="" name="txtsub" id="txtsub" hidden>
                                             </a>
 
                                         </div>
@@ -40,7 +40,7 @@
                                             <tr>
                                                 <td><span>Đường dẫn mẫu(vi)</span></td>
                                                 <td>
-                                                    <input type="text" name="linkdanhmuccon" id="txtpath" placeholder="Đường dẫn (vi)" maxlength="20" value="<?= $getone[0]['linkdanhmuccon']?>">
+                                                    <input type="text" name="txtpath" id="txtpath" placeholder="Đường dẫn (vi)" maxlength="20" value="<?= $getone[0]['linkdm2']?>">
                                                 </td>
                                             </tr> 
                                        </table>
@@ -62,25 +62,23 @@
                                         </tr>
                                         <tr class="tr_form">
                                             <td><p>Tiêu đề</p></td>
-                                            <td><input type="text" name="tendm" id="txttitle" placeholder="Tiêu đề (vi)" value="<?= $getone[0]['tendm']?>"></td>
+                                            <td><input type="text" name="txttitle" id="txttitle" placeholder="Tiêu đề (vi)" value="<?= $getone[0]['tendm']?>"></td>
                                             <td><input type="text" name="id" id="id" placeholder="Tiêu đề (vi)" value="<?= $getone[0]['id']?>" hidden ></td>
                                         </tr>
                                        </table>
-                                       <?php
-                                       var_dump($getone);
-                                       ?>
+                                       
                                     </div>
                                 </div>
                                 <div class="zone_2">
                                     <div class="choose_cataloguy_lv2">
                                         <header><span>Danh mục cấp 1</span></header>
-                                        <select name="iddm" id="choose_cataloguy_lv2">
+                                        <select name="txtiddm" id="txtiddm">
                                             <option value="chọn danh mục" selected>chọn danh mục</option>
 
                                           <?php
-                                            if(isset($getall))
+                                            if(isset($getallcataone))
                                             {
-                                                foreach ($getall as $dm ) {
+                                                foreach ($getallcataone as $dm ) {
                                                     # code...
                                                     echo' <option value="'.$dm['id'].'">'.$dm['tendm'].'</option>';
                                                 }
@@ -105,6 +103,9 @@
                                             <input type="file" name="txtfiles" id="txtfiles" value="Chọn hình" hidden>
                                         </div> -->
                                     </div>
+                                    <?php
+                                        var_dump($getone);
+                                    ?>
                                 </div>
                             </div>
                         </form>

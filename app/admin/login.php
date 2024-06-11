@@ -1,11 +1,41 @@
+<?php
+    session_start();
+    ob_start();
+    include_once('../mode/connect.php');
+    include_once('../mode/user.php');
+    if (isset($_POST['txtsbt'])) {
+        # code...
+        $pass=$_POST['txtpass'];
+        $user= $_POST['txtuser'];
+        $role=checkuser($pass,$user);
+        $_SESSION['role']=$role;
+        $maxerorrlogin = 5;
+        $i=0;
+        while($i<$maxerorrlogin)
+        {
+            if ($role===1) {
+                # code...
+                header('location:../admin/index.php');
+                break;
+            }
+            else
+            {
+                $nnotification = "Mật khẩu bạn không dúng  ";
+                header('location:../admin/login.php');
+                $i++;
+            }
+
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrator ASURE</title>
-    <link rel="stylesheet" href="../admin/view/ayout/css/login.css">
-    <link rel="stylesheet" href="../admin/view/ayout/css/default.css">
+    <link rel="stylesheet" href="../admin/view/layout/css/login.css">
+    <link rel="stylesheet" href="../admin/view/layout/css/default.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -20,7 +50,7 @@
         </header>
         <div class="wapper">
           <article class="form_article">
-            <form action="" method="post">
+            <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
                 <div class="boder_form">
                     <header class="boder_form_header">
                         <p class="boder_form_txt">đăng nhập hệ thống</p>
@@ -41,6 +71,12 @@
                             <input type="submit" value="Đăng nhập" name="txtsbt" id="txtsbt" class="txtsbt" onclick="return checkform()">
                         </div>
                         <p class="noote_erorr"></p>
+                        <?php
+                            if(isset($nnotification) && ($nnotification!=""))
+                            {
+                                echo'<p style="red">'.$nnotification.'</p>' ;
+                            }
+                        ?>
                     </nav>
                 </div>
             </form>
@@ -48,6 +84,6 @@
         </div>
     </div>
 </body>
-<script src="../admin/view/ayout/js/showpass.js"></script>
-<script src="../admin//layout//js/erorr.js"></script>
+<script src="../admin/view/layout/js/showpass.js"></script>
+<script src="../admin/view/layout/js/erorr.js"></script>
 </html>

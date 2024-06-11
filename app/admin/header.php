@@ -24,7 +24,7 @@
             <ul class="slider_list">
                 <li>
                     <div class="title">
-                        <a href="#" class="link">
+                        <a href="../admin/index.php" class="link">
                             <i class="fa-solid fa-gauge-high"></i>
                             <span class="name">Bảng điều khiển hệ thống</span>
                         </a>

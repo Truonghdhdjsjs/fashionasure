@@ -5,18 +5,20 @@
                         /
                         <a href="../admin/index.php">Thêm danh mục cấp 1</a>
                     </header>
-                   
+                   <?php
+                        var_dump($getall_catalogy);
+                   ?>
                     <nav class="level_1_business_pluscatalog">
-                        <form action="../admin/index.php?admin=addcatalogy" method="post">
+                        <form action="../admin/index?admin=add_catalogy" method="post">
                             <div class="tool_plus">
                                 <div class="tool_save" onclick="return save_catologo_lv1()">
                                     <a href="" >
-                                        <label for="txtsub">
+                                        <label for="txtsubs">
                                             <i class="fa-solid fa-floppy-disk"></i>
                                             <span>Lưu sản phẩm</span>
                                         </label>
-                                        </a>
-                                    <input type="submit" value="" name="txtsub" id="txtsub" hidden >
+                                            <input type="submit" value="" name="txtsubs" id="txtsubs" hidden >
+                                    </a>
                                 </div>
                                 <div class="tool_reset">
                                     <label for="reset">
@@ -41,7 +43,7 @@
                                     <tr>
                                         <td><span>Đường dẫn mẫu(vi)</span></td>
                                         <td>
-                                            <input type="text" name="linkdanhmuc" id="txtpath" placeholder="Đường dẫn (vi)" maxlength="20">
+                                            <input type="text" name="txtkink" id="txtpath" placeholder="Đường dẫn (vi)" maxlength="20">
                                         </td>
                                     </tr> 
                                </table>
@@ -63,7 +65,7 @@
                                 </tr>
                                 <tr class="tr_form">
                                     <td><p>Tiêu đề</p></td>
-                                    <td><input type="text" name="tendm" id="txttitle" placeholder="Tiêu đề (vi)"></td>
+                                    <td><input type="text" name="txttendm" id="txttitle" placeholder="Tiêu đề (vi)"></td>
                                 </tr>
                                </table>
 </div>

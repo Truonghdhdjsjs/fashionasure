@@ -5,14 +5,22 @@
                         /
                         <a href="../admin/catologylv1.html">Sửa danh mục cấp 1</a>
                     </header>
+                    <?php
+                    var_dump($getone);
+                    ?>
                     <nav class="level_1_business_pluscatalog">
-                        <form action="" method="post">
+                        <form action="../admin/index.php?admin=editcatalogy" method="post">
                             <div class="tool_plus">
                                 <div class="tool_save" onclick="return save_catologo_lv1()">
                                     <a href="" >
-                                        <i class="fa-solid fa-floppy-disk"></i>
-                                        <span>Lưu sản phẩm</span>
+                                        <label for="txtupdate">
+
+                                            <i class="fa-solid fa-floppy-disk"></i>
+                                            <span>Lưu sản phẩm</span>
+                                        </label>
+                                        <input type="submit" value="" name="txtupdate" id="txtupdate" hidden >
                                     </a>
+
                                 </div>
                                 <div class="tool_reset">
                                     <i class="fas fa-undo"></i>
@@ -34,7 +42,7 @@
                                     <tr>
                                         <td><span>Đường dẫn mẫu(vi)</span></td>
                                         <td>
-                                            <input type="text" name="txtpath" id="txtpath" placeholder="Đường dẫn (vi)" maxlength="20">
+                                            <input type="text" name="txtpath" id="txtpath" placeholder="Đường dẫn (vi)" maxlength="20" value="<?= $getone[0]['linkdm'] ?>">
                                         </td>
                                     </tr> 
                                </table>
@@ -56,7 +64,8 @@
                                 </tr>
                                 <tr class="tr_form">
                                     <td><p>Tiêu đề</p></td>
-                                    <td><input type="text" name="txttitle" id="txttitle" placeholder="Tiêu đề (vi)"></td>
+                                    <td><input type="text" name="txttitle" id="txttitle" placeholder="Tiêu đề (vi)" value="<?= $getone[0]['tendm'] ?>"></td>
+                                    <td><input type="hidden" name="id" id="id" placeholder="Tiêu đề (vi)" value="<?= $getone[0]['id'] ?>"></td>
                                 </tr>
                                </table>
                             </div>

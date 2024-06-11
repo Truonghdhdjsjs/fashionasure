@@ -9,7 +9,7 @@
                     <form action="" method="post">
                         <div class="catology_lv2_tool">
                             <div class="catology_lv2_tool_plus">
-                                <a href="">
+                                <a href="../admin/index?admin=pluscatalogy2">
                                     <i class="fa-solid fa-plus"></i>
                                     <span>Thêm mới</span>
                                 </a>
@@ -27,10 +27,17 @@
                             </div>
                         </div>
                         <div class="catology_lv2_select">
-                            <select name="txtselext" id="txtselext">
-                                 <option value="Chọn danh mục" selected>Chọn danh mục</option>
-                                 <option value="Quần kaki">Quần kaki</option>
-                                 <option value="Áo thun">Áo thun</option>
+                            <select name="txtchoose" id="txtselext">
+                                 <option value="0" selected>Chọn danh mục</option>
+                                 <?php
+                                    if(isset($getallcataone)&&count($getallcataone)>0)
+                                    {
+                                            foreach ($getallcataone as $choose ) {
+                                                # code...
+                                                echo' <option value="'.$choose['id'].'">'.$choose['tendm'].'</option>';
+                                            }
+                                    }
+                                 ?>
                             </select>
                         </div>
                         <div class="tb_category_lv2">
@@ -47,17 +54,17 @@
                                     <th>Thao tác</th>
                                 </tr>
                                 <?php
-                                    if(isset($getall_catalogy2)&&count($getall_catalogy2)>0)
+                                    if(isset($getall)&&count($getall)>0)
                                     {
                                         $i=1;
-                                        foreach($getall_catalogy2 as $dm2)
+                                        foreach($getall as $dm2)
                                         {
                                             echo' <tr>
                                                     <td>'.$i.'</td>                                    
                                                     <td><span>'.$dm2['tendm'].'</span></td>
                                                     <td><input type="checkbox" name="txtdisplay" id="txtdisplay"></td>
                                                     <td><input type="checkbox" name="txtoutstanding" id="txtoutstanding"></td>
-                                                    <td><a href="../admin/index.php?admin=editdm2&id='.$dm2['id'].'" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>|<a href="" class="trash"><i class="fa-solid fa-trash-can"></i></a></td>
+                                                    <td><a href="../admin/index.php?admin=editdm2&id='.$dm2['id'].'" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>|<a href="../admin/index.php?admin=delcatalogy2&id='.$dm2['id'].'" class="trash"><i class="fa-solid fa-trash-can"></i></a></td>
                                             </tr>';
                                             $i++;
                                         }
@@ -65,19 +72,11 @@
                                 ?>
                               
                             </table>
-                            <?php
-                                var_dump($getall_catalogy2);
-                            ?>
+                       
                         </div>
                     </form>
                 </nav>
              </section>
             </div>
        
-    </div>
-</body>
-<script src="../admin/layout/js/sidebar.js"></script>
-<script src="../admin/layout/js/setting_tool.js"></script>
-<script src="../admin/layout/js/icon_notification.js"></script>
-<script src="../admin/layout/js/errorsearch.js"></script>
-</html>
+   

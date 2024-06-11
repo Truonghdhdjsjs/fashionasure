@@ -6,9 +6,9 @@ upload.addEventListener('change',function(e){
     var files = upload.files[0]
     if(!files)
         {return}
-    if(!files.name.endsWith('.png'))
+    if(!files.name.endsWith('.jpg'))
         {
-            error.innerHTML='hinh can dinh dang .jpg'
+            error.innerHTML='hinh can dinh dang .png'
             error.style.color='red'
             return;
         }

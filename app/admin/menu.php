@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="tool_logout">
-                        <a href="../admin/login.html">
+                        <a href="../admin/index.php?admin=logout">
                             <i class="fa-solid fa-right-from-bracket"></i>
                             <span>đăng xuất</span>
                         </a>

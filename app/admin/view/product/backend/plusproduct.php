@@ -6,15 +6,18 @@
                         <a href="../admin/catologylv1.html">Thêm danh mục sản phẩm</a>
                     </header>
                     <nav class="level_1_business_pluscatalog">
-                        <form action="" method="post" >
+                        <form action="../admin/index.php?admin=productplus_tool" method="post" enctype="multipart/form-data" >
                             <div class="form_catologo">
 
                                 <div class="zone_1">
                                     <div class="tool_plus">
                                         <div class="tool_save" onclick="return save_catologo_lv1()">
                                             <a href="" >
-                                                <i class="fa-solid fa-floppy-disk"></i>
-                                                <span>Lưu sản phẩm</span>
+                                                <label for="nhap">
+                                                    <i class="fa-solid fa-floppy-disk"></i>
+                                                    <span>Lưu sản phẩm</span>
+                                                </label>
+                                                <input type="submit" value="" name="nhap" id="nhap" hidden>
                                             </a>
                                         </div>
                                         <div class="tool_reset">
@@ -22,7 +25,7 @@
                                             <input type="reset" value="Làm lại">
                                         </div>
                                         <div class="tool_out" onclick=" return logout_plus()">
-                                            <a  href="">
+                                            <a  href="../admin/index.php?admin=product">
                                                 <i class="fa-solid fa-right-from-bracket"></i>
                                                 <span>Thoát</span>
                                             </a>
@@ -76,11 +79,14 @@
                                 <div class="zone_2">
                                     <div class="choose_cataloguy_lv2">
                                         <header><span>Danh mục cấp 1</span></header>
-                                        <select name="choose_cataloguy_lv2" id="choose_cataloguy_lv2">
+                                        <select name="iddm" id="iddm">
                                             <option value="chọn danh mục" selected>chọn danh mục</option>
-                                            <option value="Quần kaki">Quần kaki</option>
-                                            <option value="Quần kaki">Quần kaki</option>
-                                            <option value="Quần kaki">Quần kaki</option>
+                                            <?php
+                                                    foreach($getall as $choose)
+                                                    {
+                                                        echo' <option value="'.$choose['id'].'" >'.$choose['tendm'].'</option>';
+                                                    }
+                                            ?>
                                         </select>
                                     </div>
                                     <div class="upload_product_ctalogoy_lv2">

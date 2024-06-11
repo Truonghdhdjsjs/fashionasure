@@ -3,19 +3,22 @@
                 <header class="catology_lv2_header">
                     <a href="../admin/index.html">Bảng điều khiển</a>
                     /
-                    <a href="../admin/categorylv2..html">Danh mục cấp 2</a>
+                    <a href="../admin/categorylv2..html">Danh mục san pham</a>
                 </header>
                 <nav class="catology_lv2_header_nav">
-                    <form action="" method="post">
+                    <form action="" method="post" enctype="multipart/form-data">
                         <div class="catology_lv2_tool">
                             <div class="catology_lv2_tool_plus">
-                                <a href="">
-                                    <i class="fa-solid fa-plus"></i>
-                                    <span>Thêm mới</span>
+                                <a href="../admin/index.php?admin=productplus">
+                                    <label for="">
+                                        <i class="fa-solid fa-plus"></i>
+                                        <span>Thêm mới</span>
+                                    </label>
+                                   
                                 </a>
                             </div>
                             <div class="catology_lv2_tool_delete">
-                                <a href="">
+                                <a href="../admin/index.php?admin=delalproduct">
                                     <i class="fa-solid fa-trash-can"></i>
                                     <span>Xóa tất cả</span>
                                 </a>
@@ -27,10 +30,14 @@
                             </div>
                         </div>
                         <div class="catology_lv2_select">
-                            <select name="txtselext" id="txtselext">
-                                 <option value="Chọn danh mục" selected>Chọn danh mục</option>
-                                 <option value="Quần kaki">Quần kaki</option>
-                                 <option value="Áo thun">Áo thun</option>
+                            <select name="iddm" id="iddm">
+                                 <option value="0" selected>Chọn danh mục</option>
+                                <?php
+                                    foreach($getall as $choose)
+                                    {
+                                        echo' <option value="'.$choose['id'].'" >'.$choose['tendm'].'</option>';
+                                    }
+                                ?>
                             </select>
                         </div>
                         <div class="tb_category_lv2">
@@ -40,23 +47,35 @@
                             <table class="table_category_lv2">
                                 <tr>
                                     <th>STT</th>
-                                    <th>Hình</th>
                                     <th>Tiêu đề</th>
+                                    <th>Hình</th>
                                     <th>Hiển thị </th>
                                     <th>Nổi bật</th>
                                     <th>Thao tác</th>
                                 </tr>
-                               <tr>
-                                    <td></td>
-                                    <td>sss</td>
-                                    <td><span>Nước lau nhà mới</span></td>
-                                    <td><input type="checkbox" name="txtdisplay" id="txtdisplay"></td>
-                                    <td><input type="checkbox" name="txtoutstanding" id="txtoutstanding"></td>
-                                    <td><a href="" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>|<a href="" class="trash"><i class="fa-solid fa-trash-can"></i></a></td>
-                               </tr>
+                                <?php
+                                    if (isset($getproduct)&&count($getproduct)>0) {
+                                        # code...
+                                        $i=1;
+                                        foreach ($getproduct as $product ) {
+                                            # code...
+                                            echo' <tr>
+                                                    <td>'.$i.'</td>
+                                                    <td><span>'.$product['tensp'].'</span></td>
+                                                    <td><img src="'.$product['img'].'" style=" position: relative;  width: 100px; object-fit: cover; height: 100px;"></td>
+                                                    <td><input type="checkbox" name="txtdisplay" id="txtdisplay"></td>
+                                                    <td><input type="checkbox" name="txtoutstanding" id="txtoutstanding"></td>
+                                                    <td><a href="../admin/index.php?admin=editproduct&id='.$product['id'].'" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>|<a href="../admin/index.php?admin=delproduct&id='.$product['id'].'" class="trash"><i class="fa-solid fa-trash-can"></i></a></td>
+                                            </tr>';
+                                            $i++;
+                                        }
+                                    }
+                                ?>
+                             
                             </table>
                         </div>
                     </form>
+                   
                 </nav>
              </section>
         </div>

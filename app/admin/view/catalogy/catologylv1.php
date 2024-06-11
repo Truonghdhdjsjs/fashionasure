@@ -1,9 +1,9 @@
 
              <section id=" level_1_business_category">
                 <header class="level_1_business_category_header">
-                    <a href="../admin/index.html">bảng điều khiển</a>
+                    <a href="../admin/index.php">bảng điều khiển</a>
                     /
-                    <a href="../admin/catologylv1.html">danh mục cấp 1</a>
+                    <a href="../admin/index.php?admin=catalogy">danh mục cấp 1</a>
                 </header>
                 <nav class="level_1_business_category_nav">
                     <form action="" method="post">
@@ -49,7 +49,10 @@
                                                 <td><span>'.$dm['tendm'].'</span></td>
                                                 <td><input type="checkbox" name="txtoutstanding" id="txtoutstanding"> </td>
                                                 <td><input type="checkbox" name="txtdisplay" id="txtdisplay"> </td>
-                                                <td class="table_linl"><a href="" class="edit"><i class="fa-solid fa-pen-to-square" class="delete"></i></a>|<a href=""><i class="fa-regular fa-trash-can"></i></a></td>
+                                                <td class="table_linl">
+                                                <a href="../admin/index.php?admin=editcatalogy&id='.$dm['id'].'" class="edit"><i class="fa-solid fa-pen-to-square" class="delete"></i></a>
+                                                |
+                                                <a href="../admin/index.php?admin=delcatalogy1&id='.$dm['id'].'"><i class="fa-regular fa-trash-can"></i></a></td>
                                             </tr>';
                                             $i++;
                                     }
